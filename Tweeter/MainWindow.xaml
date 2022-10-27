@@ -1,0 +1,19 @@
+﻿<Window x:Class="Tweeter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        
+        xmlns:local="clr-namespace:Tweeter" Background="{DynamicResource ThemeBrushKey}"
+        mc:Ignorable="d"
+        Title="ツイートを投稿するだけ" Height="300" Width="500">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="64"/>
+        </Grid.RowDefinitions>
+        <TextBox x:Name="TweetText" Margin="8" AcceptsReturn="True" KeyDown="TweetText_KeyDown" KeyUp="TweetText_KeyUp" FontSize="16"/>
+
+        <Button x:Name="TweetButton" Content="ツイートする" Click="TweetButton_Click" Grid.Row="1" Margin="6" FontSize="20"/>
+    </Grid>
+</Window>
